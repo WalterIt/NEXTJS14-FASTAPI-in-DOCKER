@@ -1,21 +1,13 @@
-# Use a imagem oficial do Node.js como base
-FROM node:20.11.0
+# Use a imagem base do Python
+FROM python:3.9
 
-# Defina o diretório de trabalho dentro do contêiner  /home/wshir/NEXTJS/MFinances/client  /usr/src/app
+# Configuração do diretório de trabalho
 WORKDIR /usr/src/app
 
-# Copie o arquivo package.json para o diretório de trabalho
-COPY package.json ./
+# Copie o arquivo requirements.txt para o contêiner
+COPY requirements.txt .
 
-# Instale as dependências do projeto
-RUN npm install
+# Instale as dependências
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Copie todo o código-fonte do Next.js para o contêiner
-COPY . .
-
-RUN npm run build
-
-COPY . .
-
-# Execute o servidor Next.js em modo de desenvolvimento
-CMD ["npm", "run", "dev"]
+# Restante das instruções do Dockerfile...
