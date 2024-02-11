@@ -1,0 +1,42 @@
+# Arquivos gerados pelo Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ambientes virtuais
+venv/
+myenv/
+.venv/
+*/venv
+# Arquivos de log
+*.log
+
+# Arquivos de banco de dados
+*.db
+*.sqlite3
+
+# Arquivos de configuração
+.env
+
+# Dependências geradas pelo pip
+pip-*.log
+requirements.txt
+
+# Arquivos de cache
+.cache/
+.cached/
+
+# Arquivos de build
+build/
+dist/
+*.egg-info/
+
+
+# Arquivos de IDE
+.vscode/
+
+
+# Outros arquivos temporários
+*.swp
+*~
