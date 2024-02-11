@@ -21,7 +21,6 @@ myenv/
 
 # Dependências geradas pelo pip
 pip-*.log
-requirements.txt
 
 # Arquivos de cache
 .cache/
